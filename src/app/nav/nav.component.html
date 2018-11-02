@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-md navbar-dark">
+  <img src="../../assets/images/US-DOI-BLM-logo.png"
+       style="height: 50px; width: auto;">
+  <a class="navbar-brand" href="">RAPTOR</a>
+  <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+    [attr.aria-expanded]="!isCollapsed" aria-controls="navbarSupportedContent">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" [ngbCollapse]="!isCollapsed" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <div class="nav-item dropdown" *ngIf="auth.isLoggedIn()" ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" ngbDropdownToggle>Applications</a>
+        <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="srpApp">SRP Application</a>
+          <a class="dropdown-item" href="#">PRUP Application</a>
+        </div>
+      </div>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="auth.isLoggedIn()" href="appDash">Applicant Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="auth.isLoggedIn()" href="blmDash">BLM Dashboard</a>
+      </li>
+      <div class="nav-item dropdown" *ngIf="auth.isLoggedIn()" ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" ngbDropdownToggle>Reviews</a>
+        <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Completeness</a>
+          <a class="dropdown-item" href="reviewTwo">Cost Recovery and Substantial Work</a>
+          <a class="dropdown-item" href="reviewThree">Final Review</a>
+        </div>
+      </div>
+      <div class="nav-item dropdown" *ngIf="auth.isLoggedIn()" ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" ngbDropdownToggle>Admin Console</a>
+        <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="terms">Terms and Conditions</a>
+          <a class="dropdown-item" href="applicantSearch">Applicant Search</a>
+          <a class="dropdown-item" href="BLMSearch">BLM User Search</a>
+          <a class="dropdown-item" href="docLib">Document Library</a>
+          <a class="dropdown-item" href="domains">Domains</a>
+        </div>
+      </div>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="!auth.isLoggedIn()" href="createAccount">Create Account</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="auth.isLoggedIn()" href="profile">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="!auth.isLoggedIn()" href="logIn">Log In</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="auth.isLoggedIn()" href="/" (click)="auth.logout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>

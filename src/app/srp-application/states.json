@@ -1,0 +1,363 @@
+{
+    "states":  [
+        {
+          "country": "USA",
+          "name": "Alabama",
+          "abbreviation": "AL",
+          "code": ""
+        },
+        {
+          "country": "USA",
+          "name": "Alaska",
+          "abbreviation": "AK",
+          "code": ""
+        },
+        {
+            "name": "Arizona",
+            "abbreviation": "AZ",
+            "code": ""
+        },
+        {
+          "country": "USA",
+          "name": "Arkansas",
+          "abbreviation": "AR",
+          "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "California",
+            "abbreviation": "CA",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Colorado",
+            "abbreviation": "CO",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Conneticut",
+            "abbreviation": "CT",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Deleware",
+            "abbreviation": "DE",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Florida",
+            "abbreviation": "FL",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Georgia",
+            "abbreviation": "GA",
+            "code": ""
+        },
+        {
+            "name": "Hawaii",
+            "abbreviation": "HI",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Idaho",
+            "abbreviation": "ID",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Illinois",
+            "abbreviation": "IL",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Indiana",
+            "abbreviation": "IN",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Iowa",
+            "abbreviation": "IA",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Kansas",
+            "abbreviation": "KS",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Kentucky",
+            "abbreviation": "KY",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Louisiana",
+            "abbreviation": "LA",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Maine",
+            "abbreviation": "ME",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Maryland",
+            "abbreviation": "MD",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Massachusetts",
+            "abbreviation": "MA",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Michigan",
+            "abbreviation": "MI",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Minnesota",
+            "abbreviation": "MN",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Mississippi",
+            "abbreviation": "MS",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Missouri",
+            "abbreviation": "MO",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Montana",
+            "abbreviation": "MT",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Nebraska",
+            "abbreviation": "NE",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Nevada",
+            "abbreviation": "NV",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "New Hampshire",
+            "abbreviation": "NH",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "New Jersey",
+            "abbreviation": "NJ",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "New Mexico",
+            "abbreviation": "NM",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "New York",
+            "abbreviation": "NY",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "North Carolina",
+            "abbreviation": "NC",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "North Dakota",
+            "abbreviation": "ND",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Ohio",
+            "abbreviation": "OH",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Oklahoma",
+            "abbreviation": "OK",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Oregon",
+            "abbreviation": "OR",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Pennsylvania",
+            "abbreviation": "PA",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Rhode Island",
+            "abbreviation": "RI",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "South Carolina",
+            "abbreviation": "SC",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "South Dakota",
+            "abbreviation": "NC",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Tennessee",
+            "abbreviation": "TN",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Texas",
+            "abbreviation": "TX",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Utah",
+            "abbreviation": "UT",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Vermont",
+            "abbreviation": "VT",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Virginia",
+            "abbreviation": "VA",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Washington",
+            "abbreviation": "WA",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "West Virginia",
+            "abbreviation": "WV",
+            "code": ""
+        },
+        {
+          "country": "USA",
+            "name": "Wisconsin",
+            "abbreviation": "WI",
+            "code": ""
+        },
+        {
+          "country": "USA",
+          "name": "Wyoming",
+          "abbreviation": "WY",
+          "code": ""
+        },
+        {
+          "country": "Canada",
+          "name": "Ontario",
+          "abbreviation": "ON",
+          "code": ""
+        },
+        {
+          "country": "Canada",
+          "name": "Quebec",
+          "abbreviation": "QC",
+          "code": ""
+        },
+        {
+          "country": "Canada",
+          "name": "Nova Scotia",
+          "abbreviation": "NS",
+          "code": ""
+        },
+        {
+          "country": "Canada",
+          "name": "New Brunswick",
+          "abbreviation": "NB",
+          "code": ""
+        },
+        {
+          "country": "Canada",
+          "name": "Manitoba",
+          "abbreviation": "MB",
+          "code": ""
+        },
+        {
+          "country": "Canada",
+          "name": "British Columbia",
+          "abbreviation": "BC",
+          "code": ""
+        },
+        {
+          "country": "Canada",
+          "name": "Prince Edward Islan",
+          "abbreviation": "PE",
+          "code": ""
+        },
+        {
+          "country": "Canada",
+          "name": "Saskatchewan",
+          "abbreviation": "SK",
+          "code": ""
+        },
+        {
+          "country": "Canada",
+          "name": "Alberta",
+          "abbreviation": "AB",
+          "code": ""
+        }
+        ,
+        {
+          "country": "Canada",
+          "name": "Newfoundland and Labrador",
+          "abbreviation": "NL",
+          "code": ""
+        }
+    ]
+}

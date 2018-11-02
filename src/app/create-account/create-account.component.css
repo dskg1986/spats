@@ -1,0 +1,9 @@
+label {
+  font-weight: bolder;
+  color: azure;
+}
+.jumbotron {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

@@ -1,0 +1,20 @@
+label {
+  font-weight: bolder;
+}
+.red {
+  color: red;
+}
+input:invalid+span:after {
+  position: absolute;
+  display: inline;
+  content: '✖';
+  padding-left: 5px;
+  color: #8b0000;
+}
+input:valid+span:after {
+  position: absolute;
+  display: inline;
+  content: '✓';
+  padding-left: 5px;
+  color: #009000;
+}

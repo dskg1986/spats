@@ -1,0 +1,34 @@
+.blmYellow {
+  background-color: rgba(255, 213, 86, 0.85) !important;
+}
+.blmGreen {
+  background-color: rgb(76, 110, 22, 0.85) !important;
+}
+.blmOrange {
+  background-color: rgba(218, 80, 0, 0.85) !important;
+}
+.blmGreen h2, .blmGreen p {
+  color: #DFDFCA;
+}
+.blmOrange h2, .blmOrange p {
+  color: #DFDFCA;
+}
+#homeBody {
+  background-image: url("../../assets/images/home-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#top {
+  padding-top: 10px;
+}
+#middle->.jumbotron {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+#description {
+  font-size: 18px !important;
+}
+.jumbotron {
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 10px;
+}

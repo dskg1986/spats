@@ -1,0 +1,96 @@
+<div id="recHome">
+  <div class="container-fluid" >
+    <div class="text-center">
+      <h1>Special Recreation Permits</h1>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6 offset-md-1">
+        <div class="jumbotron">
+          <p>Something goes here.  It will be so great.  Not sure what it is yet but it will be awesome.</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="jumbotron">
+          <h3>Quick Links</h3>
+          <h4>Informational Videos</h4>
+          <ul>
+            <li><span (click)="open(frankTurner)">What is a SRP and Why is it Needed?</span></li>
+            <li><span (click)="open(hotWaterMusic)">How to access and use the SPR Application System?</span></li>
+            <li><span (click)="open(hotWaterMusic)">What happens after you submit an application?</span></li>
+            <li><span (click)="open(gaslightAnthem)">What to expect in the Field Office Consultation?</span></li>
+          </ul>
+          <h4>Additional Informational</h4>
+          <ul>
+            <li>User Guide</li>
+            <li>Where to go for help?</li>
+            <li>Need Help Creating an Operation Plan?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-10 offset-md-1">
+        <div class="jumbotron">
+          <h3>Lets put a map here....why not?</h3>
+          <div class="map_frame">
+            <iframe
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAbpZcWTxpqLAPx_sUQGeI2w3HAAczmms4&q=Denver, CO" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #frankTurner let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="text-center">
+      <iframe width="750" height="450" src="https://www.youtube.com/embed/Cf5O2M5GaEA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>
+
+<ng-template #hotWaterMusic let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="text-center">
+      <iframe width="750" height="450" src="https://www.youtube.com/embed/XPVNKIqy_cw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>
+
+<ng-template #gaslightAnthem let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="text-center">
+        <iframe width="750" height="450" src="https://www.youtube.com/embed/J-ZN7NyPfb4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>

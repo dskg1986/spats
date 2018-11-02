@@ -1,0 +1,115 @@
+<div class="container-fluid">
+  <div class="text-center">
+    <h1>Create New SPATS User Account</h1>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 offset-sm-1">
+      <div class="jumbotron">
+        <form (submit)="register()">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input class="form-control" type="text"
+                minlength="5" maxlength="20"
+                name="firstName" required
+                [(ngModel)]="credentials.firstName" #firstName="ngModel">
+                <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="alert alert-danger">
+                  <div *ngIf="firstName.errors.required">
+                    First Name is required.
+                  </div>
+                  <div *ngIf="firstName.errors.minlength">
+                    First Name must be at least 5 characters long.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input class="form-control" type="text"
+                minlength="5" maxlength="20"
+                name="lastName" required
+                [(ngModel)]="credentials.lastName" #lastName="ngModel">
+                <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="alert alert-danger">
+                  <div *ngIf="lastName.errors.required">
+                    Last Name is required.
+                  </div>
+                  <div *ngIf="lastName.errors.minlength">
+                    Last Name must be at least 5 characters long.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" type="email"
+                maxlength="30"
+                name="email" required email
+                ngbTooltip="This email address will be used to log into SPATS"
+                [(ngModel)]="credentials.email" #email="ngModel">
+                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+                  <div *ngIf="email.errors.required">
+                    An Email Address is required.
+                  </div>
+                  <div *ngIf="email.errors.email">
+                    Please Enter a Valid Email Address
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input class="form-control" type="password"
+                minlength="12" maxlength="50"
+                name="password" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}"
+                [(ngModel)]="credentials.password" #password="ngModel">
+                <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+                  <div *ngIf="password.errors.required">
+                    Password is required.
+                  </div>
+                  <div *ngIf="password.errors.minlength">
+                    Minimum Password Length is 12 characters.
+                  </div>
+                  <div *ngIf="password.errors.pattern">
+                    Not a Strong Enough Password. The password must have an uppercase letter, a number, and a special character.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox"
+              name="agree" required value="false"
+              [(ngModel)]="agreeValue">
+              <label class="form-check-label" for="agree">
+                  By checking this box, you agree that you have completed a pre-application consultation with
+                  the local BLM office, and have viewed the SRP informational videos.  NEW SRP applications
+                  submitted without a pre-application consultation may be immediately denied.
+                  A pre-application consultation is not required for a permit RENEWAL with no changes.
+                  In addition, you agree to the BLM <a href="accountTC" target="_blank">terms and conditions</a>
+                  for using and storing user data.
+              </label>
+              <div *ngIf="!agreeValue" class="alert alert-danger">
+                  You must agree to the terms and conditions.
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <button type="submit" [disabled]="firstName.invalid||lastName.invalid||email.invalid||password.invalid||!agreeValue" class="btn btn-success btn-block">Create Account</button>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <button type="reset" class="btn btn-danger btn-block">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

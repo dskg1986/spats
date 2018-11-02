@@ -1,0 +1,72 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="text-center">
+        <h1>Account Profile</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 offset-sm-1">
+      <div class="jumbotron">
+        <form (submit)="updateProfile()">
+          <div class="row">
+            <div class="col-xs-12 col-sm-3 offset-sm-8">
+              <button type="button" class="btn btn-block btn-primary" [hidden]="!viewOnly" (click)="edit()">Edit</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-3 offset-sm-1">
+              <div class="form-group">
+                <label for="userType">User Type</label>
+                <input type="text" class="form-control" name="userType" disabled  [(ngModel)]="details.userType" #userType="ngModel">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 offset-sm-1">
+              <div class="form-group">
+                <label for="firstName">First Name <span class="red">*</span></label>
+                <input type="text" class="form-control" name="firstName" [disabled]="viewOnly" [(ngModel)]="details.firstName" required>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-2">
+              <div class="form-group">
+                <label for="middleInitial">Middle Initial</label>
+                <input type="text" class="form-control" name="middleInitial" [disabled]="viewOnly" [(ngModel)]="details.middleInitial">
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <div class="form-group">
+                <label for="lastName">Last Name <span class="red">*</span></label>
+                <input type="text" class="form-control" name="lastName" [disabled]="viewOnly" [(ngModel)]="details.lastName" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-5 offset-sm-1">
+              <div class="form-group">
+                <label for="email">Username / Email <span class="red">*</span></label>
+                <input type="text" class="form-control" name="email" [disabled]="viewOnly" [(ngModel)]="details.email" required>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-5">
+              <div class="form-group">
+                <label for="phoneNumber">Phone Number <span class="red">*</span></label>
+                <input type="tel" class="form-control" name="phoneNumber" [disabled]="viewOnly" [(ngModel)]="details.primePhone" required>
+              </div>
+            </div>
+          </div>
+          <div class="row" [hidden]="viewOnly">
+            <div class="col-xs-12 col-sm-3 offset-sm-2">
+              <button type="submit" class="btn btn-block btn-success">Save</button>
+            </div>
+            <div class="col-xs-12 col-sm-3 offset-sm-2">
+              <button type="button" class="btn btn-block btn-danger" (click)="edit()">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

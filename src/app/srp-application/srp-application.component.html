@@ -1,0 +1,273 @@
+<div class="container-fluid">
+  <div class="text-center">
+    <h1>Special Recreation Permit <small>(OMB Form 2930-1)</small></h1>
+  </div>
+  <form>
+    <ngb-tabset>
+      <ngb-tab title="Basic Information">
+        <ng-template ngbTabContent>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 offset-sm-1">
+              <div class="form-group">
+                <label for="appName">Application Name <span class="red">*</span></label>
+                <input class="form-control" type="text"
+                maxlength="50" required name="appName"
+                [(ngModel)]="app.applicationName">
+              </div>
+             </div>
+            <div class="col-xs-12 col-sm-4">
+              <div class="form-group">
+                <label for="permitNumber">Pernit No.</label>
+                <input class="form-control" type="number" disabled [(ngModel)]="app.permitNumber" name="permitNumber">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 offset-sm-1">
+              <div class="form-group">
+                <label for="appType">Application Type <span class="red">*</span></label>
+                <select class="form-control" required [(ngModel)]="app.applicationType" name="applicationType">
+                  <option value="New" selected>New Application</option>
+                  <option value="Renewal">Permit Renewal</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <div class="form-group">
+                <label for="orgName">Name of Business or Organization <span class="red">*</span></label>
+                <input class="form-control" type="text" maxlength="100" required [(ngModel)]="app.organization" name="organization">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 offset-sm-1">
+              <div class="form-group">
+                <label for="firstName">First Name<span class="red">*</span></label>
+                  <input class="form-control" type="text" maxlength="20" required [(ngModel)]="app.applicantFirstName" name="applicantFirstName">
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-2">
+              <div class="form-group">
+                <label for="midInit">Middle Initial</label>
+                  <input class="form-control" type="text" maxlength="1" required [(ngModel)]="app.applicantMiddleInitial" name="applicantMiddleInitial">
+              </div>
+             </div>
+             <div class="col-xs-12 col-sm-4">
+                <div class="form-group">
+                 <label for="lastName">Last Name<span class="red">*</span></label>
+                   <input class="form-control" type="text" maxlength="20" required [(ngModel)]="app.applicantLastName" name="applicantLastName">
+               </div>
+             </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-5 offset-sm-1">
+              <div class="form-group">
+                <label for="address1">Address 1 <span class="red">*</span></label>
+                <input class="form-control" type="text" required [(ngModel)]="app.address1" name="adress1">
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-5">
+              <div class="form-group">
+                <label for="address2">Address 2</label>
+                <input class="form-control" type="text" [(ngModel)]="app.address2" name="adress2">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 offset-sm-1">
+              <div class="form-group">
+                <label for="city">City <span class="red">*</span></label>
+                <input type="text" class="form-control" required [(ngModel)]="app.city" name="city">
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-2">
+              <div class="form-group">
+                <label for="country">Country</label>
+                <select class="form-control" required [(ngModel)]="country" name="country" id="country">
+                  <option selected disabled>--Select One--</option>
+                  <option *ngFor="let country of countries">{{ country.name }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-2">
+              <div class="form-group">
+                <label for="state">State <span class="red">*</span></label>
+                <select class="form-control" required name="state" [(ngModel)]="app.state">
+                  <option selected disabled>----</option>
+                  <option *ngFor="let state of states">{{ state.abbreviation }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-2">
+              <div class="form-group">
+                <label for="zipCode">Zip Code</label>
+                <input type="text" class="form-control" required [(ngModel)]="app.zipCode" name="zipCode">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 offset-sm-1">
+              <div class="form-group">
+                <label for="phoneNumber">Phone Number <span class="red">*</span></label>
+                <input class="form-control" type="tel" placeholder="123-4567-8901" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required
+                [(ngModel)]="app.phoneNumber" name="phoneNumber">
+                <span class="validity"></span>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-2">
+              <div class="form-group">
+                <label for="extension">Ext.</label>
+                <input type="text" class="form-control" placeholder="1234" pattern="[0-9]{4}" [(ngModel)]="app.ext" name="ext">
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <div class="form-group">
+                <label for="faxNumber">FAX Number <span class="red">*</span></label>
+                <input type="tel" class="form-control" placeholder="123-4567-8901" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required
+                [(ngModel)]="app.faxNumber" name="faxNumber">
+                <span class="validity"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-5 offset-sm-1">
+              <div class="form-group">
+                <label for="email">Email Address <span class="red">*</span></label>
+                <input type='email' class="form-control" required [(ngModel)]="app.email" name="email">
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-5">
+              <div class="form-group">
+                <label for="webURL">Website</label>
+                <input type="text" class="form-control" [(ngModel)]="app.webURL" name="webURL">
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Application Questions">
+        <ng-template ngbTabContent>
+          <div class="row">
+            <div class="col-xs-12 col-sm-5 offset-1">
+              <div class="form-group">
+                <label for="applicantType">Applicant Is? <span class="red">*</span></label>
+                <select class="form-control" required [(ngModel)]="app.applicantType" name="applicantType">
+                  <option selected disabled>--Select One--</option>
+                  <option value="Individual">Individual</option>
+                  <option value="Corporation">Corporation</option>
+                  <option value="Government Agency">Government Agency</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-5 offset-sm-1">
+              <div class="form-group">
+                <label for="applicationUse">Application is for? <span class="red">*</span></label>
+                <select multiple class="form-control" required [(ngModel)]="app.applicationUse" name="applicationUse">
+                  <option selected disabled>--Select All that Apply--</option>
+                  <option>Commercial</option>
+                  <option>Competative</option>
+                  <option>Organized Group</option>
+                  <option>Vending</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-10 offset-sm-1">
+              <label>Other Individuals Operating on Permit</label>
+              <table class="table table-responsive table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Comments</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td><input type="text"></td>
+                  <td><input type="text"></td>
+                  <td><input type="text"></td>
+                  <td><input type="text"></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Map and Operations Plan">
+        <ng-template ngbTabContent>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
+
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Application">
+        <ng-template ngbTabContent>
+          <div class="row">
+            <div class="col-xs-12 col-sm-5 offset-sm-1">
+              <div class="form-group">
+                <label for="beginDate">Proposed Begin Date</label>
+                <input type="date" name="beginDate" class="form-control">
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-5">
+              <div class="form-group">
+                <label for="endDate">Proposed End Date</label>
+                <input type="date" name="endDate" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-5 offset-sm-1">
+              <div class="form-group">
+                <label for="15a">Do you have a permit with BLM/USFS/NPS?</label>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-5">
+              <div class="form-group">
+                <label for="15b">Have you had a permit previously?</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-5 offset-sm-1">
+              <div class="form-group">
+                <label for="15a">Have you ever been denied or had a permit revoked?</label>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-5">
+              <div class="form-group">
+                <label for="15b">Have you forfeited a bond or other security?</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-5 offset-sm-1">
+              <div class="form-group">
+                <label for="15a">Do you have any unresolved, criminal, civil, or administrative actions related to a permit or the activities you plan to conduct under this permit?</label>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-5">
+              <div class="form-group">
+                <label for="15b">Have you been convicted, or paid a fine, or forfeited a bond for violation regarding natural resources, cultural resources, or any activity related to your proposal?</label>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <button type="reset" class="btn btn-block btn-danger" (click)="cancel()">Cancel</button>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <button class="btn btn-block btn-primary" (click)="save()">Save</button>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <button class="btn btn-block btn-success" (click)="submit()">Submit</button>
+      </div>
+    </div>
+  </form>
+
+</div>
